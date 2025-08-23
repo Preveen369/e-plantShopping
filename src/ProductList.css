@@ -298,11 +298,7 @@ body {
 
 .welcome-section .cta-button:hover {
     background-color: #45a049;
-<<<<<<< HEAD
-    transform: scale(1.05); 
-=======
     transform: scale(1.05);
->>>>>>> 80857481cc185e005e86531db23cede3562199ae
 }
 
 /* Animation for Fade-In Effect */
