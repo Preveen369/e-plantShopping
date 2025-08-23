@@ -346,7 +346,17 @@ function ProductList({ onHomeClick }) {
         </div>
       </div>
 
-      {!showCart && showPlants ? (
+      {!showCart && !showPlants ? (
+        <div className="welcome-section">
+          <h1>Welcome to Paradise Nursery</h1>
+          <p>Explore our wide range of plants to bring greenery and serenity to your space. Discover air-purifying, aromatic, and low-maintenance plants today!</p>
+          <button className="cta-button" onClick={handlePlantsClick}>
+            Shop Plants Now
+          </button>
+        </div>
+      ) : showCart ? (
+        <CartItem onContinueShopping={handleContinueShopping} />
+      ) : (
         <div className="product-grid">
           {plantsArray.map((category, index) => (
             <div key={index}>
@@ -378,13 +388,6 @@ function ProductList({ onHomeClick }) {
               </div>
             </div>
           ))}
-        </div>
-      ) : showCart ? (
-        <CartItem onContinueShopping={handleContinueShopping} />
-      ) : (
-        <div>
-          <h1>Welcome to Paradise Nursery</h1>
-          <p>Explore our wide range of plants by clicking the "Plants" link above!</p>
         </div>
       )}
     </div>

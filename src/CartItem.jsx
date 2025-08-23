@@ -51,7 +51,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   // Handle checkout (placeholder for future implementation)
   const handleCheckoutShopping = (e) => {
-    alert('Functionality to be added for future reference');
+    alert('Coming Soon .... ');
   };
 
   return (
