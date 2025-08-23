@@ -234,3 +234,113 @@ body {
         text-align: center;
     }
 }
+
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh; /* Reduced height for better fit */
+    background: linear-gradient(rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.3)), url('https://cdn.pixabay.com/photo/2017/08/07/22/57/leaves-2607531_1280.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 40px 20px;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Heading Styling */
+.welcome-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2e7d32; /* Darker green to match navbar */
+    margin-bottom: 15px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Decorative Underline for Heading */
+.welcome-section h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #4CAF50;
+    border-radius: 2px;
+}
+
+/* Paragraph Styling */
+.welcome-section p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Call-to-Action Button */
+.welcome-section .cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.welcome-section .cta-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Animation for Fade-In Effect */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.welcome-section h1,
+.welcome-section p,
+.welcome-section .cta-button {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-section {
+        min-height: 50vh;
+        padding: 30px 15px;
+    }
+
+    .welcome-section h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-section p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .welcome-section p {
+        font-size: 0.9rem;
+    }
+
+    .welcome-section .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
