@@ -386,7 +386,7 @@ function ProductList({ onHomeClick }) {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> 
           ))}
         </div>
       )}
